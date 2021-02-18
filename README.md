@@ -1,20 +1,38 @@
-# An Analysis of Kickstarter Campaigns
-Louise wants to use Kickstarter as a way to fund her play. In this analysis we analyzed a data of various campaigns in order to discover trends among successful and unsuccessful campaigns. 
+# Kickstarting with Excel
 ---
--In our analysis we discovered that in general there are no specific coorelation between spand of time of each campaigns and success as there were some very short campaigns that were successful.
+## Overview of Project
+ ---
+
+### Purpose
+We'll be looking for trends between launch dates and funding goals on campaign outcomes 
+Louise wants to know how different campaigns performed based on their launch dates and their funding goals. 
 ---
--There are many successful theather campaigns over all in the Dataset. The Theather campaign are very popular in the us with a total of 525 successful and 349 unsuccesful campaigns. ![ParentCategoryOutcomes] (C:\Users\Esther\Desktop\Anlaysis Project\Crowdfunding Analysis\ParentCategoryOutcomes)
+## Analysis and Challenges
 ---
--Louise wanted to get an inside look at the theather catagory in Great Britain since she possibly wants to do a play there. After filtering through the dataset we found that in Great Britain the theater catergory is the most successful!
+### Analysis of Outcomes Based on Launch Date
+To perform the analysis on launch dates I began by creating a pivot table and chart that visualized outcomes based on months for all theater campaigns. Our analysis of outcomes based on launch shows that there are no significant relationship between launch date and amount of cancelations. The "canceled" line on the chart is extremely low and steady. 
+Our graph shows that there is a an incline in successful outcomes from January, with a peak in May. In the months following May, the graph shows that there is a gradual decrease of sucessful campaigns for the rest of the year.The failed campagin line follows the same trend as the successful campaign. The highest amount of failed campaigns fall in May.
+
+
+
+![Theater_Outcomes_vs_Launch.png](https://github.com/Cmarescot/Kickstarter-analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
 ---
--We found that May has the most successful Kickstarter campaigns.BUT January, June, July and October had around the same failed campaign which signals that there may not be a direct coorelation between success of campaigns and month of launch ![StartDateOutcomes] (C:\Users\Esther\Desktop\Anlaysis Project\Crowdfunding Analysis\StartDateOutcomes)
+### Analysis of Outcomes Based on Goals
+To perform the analysis on goals I organized the "play" data into tiers based on different goal ranges for outcomes "successful" "failed" and "canceled. In order to get a visual representation on how much data were in each tier, I converted each tier into percetanges of a whole (total projects). Our analysis of outcomes based on goals shows that there is a gradual decrease in successful campaigns as the goal amount began to increase (inverse relationship). Towards the end of the data set(35000-44999) there is a sudden increase but only for a small portion of projects. 
+
+
+![Outcomes_vs_Goals.png](https://github.com/Cmarescot/Kickstarter-analysis/blob/main/Resources/Outcomes_vs_Goals.png)
+ ---
+### Challenges and Difficulties Encountered
+There were some challenges making sure that the correct data were being filtered. For while, my numbers were off because I accidentley but "49000" instead of "49999". I was able to catch this error by using the "sum" and "countifs" greater than 0 function. 
 ---
--Using VLookup we were able to get some more data for Louise on some plays she saw at the Edinbrgh Festival Fringe. We were able to extract the data and present Louise with an average donation amount and the number of backers each campaign had
+## Results
+The fact that there were no significant relationship between launch date and the amount of cancelations lets us know that campaign cancelations happened for other reasons outside of launching at the "wrong times". As pointed out by the graph, there is an increase in success among campaigns that launched in May. Louise statistically would be better off launching a campaign in May as the most successful campaigns were launched in May. 
 ---
--Using measures of tendencies we were able to discover that in general the datasets are skewed, meaning that ther are some large values driving the overall distributions 
+The fact that the highest failed campagins are also in March doesnt mean that May is a "bad" time to launch campaign but rather that there is just a bigger sample size (May in general has the MOST total campaigns). 
 ---
-Our box and whiskers analysis shows that there are some outliers in both the goals and pledged amounts in great britain . 
+The fact that there is a steady decline in success as campaign goals increase concludes that smaller goals have a better chance of being successful (goals are more likely to be reached). There was a sudden and step spike around the 3000 to 4500 marks but those only make up for a small portion of the total projects, so their data arent really significant (there likely outliers). 
 ---
--We noticed that the average or mean campaign goal in the great britain is around 4,000 euros. Louise had budged for the same amount but according to the actual pledged amounts Louise's goal falls just outside of the third quartile (is an outlier) . As a result Louise should think about lowering her goal. 
+Some limitations to this dataset are its filters. It doesnt focus on a specific country. Also, the "Outcomes based on Launch Date" analysis focuses on theater campaigns overall and not just plays. 
 ---
-In General Louise has a really good shot at a successful campaign in both the US but espcially in Great Britain. She should work on lowering her budget in general and possibly looking in to launching her campaign in May. 
+Box and Whiskers would definetly help gain a bigger picture and help identity which data points can be looked over. For example in the "Outcomes based on Goals" analysis, If we knew for sure if the sudden spikes were outliers than we would have a reliable case to make. 
