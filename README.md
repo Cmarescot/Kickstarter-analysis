@@ -26,6 +26,7 @@ To perform the analysis on goals I organized the "play" data into tiers based on
 ### Challenges and Difficulties Encountered
 There were some challenges making sure that the correct data were being filtered. For while, my numbers were off because I accidentley but "49000" instead of "49999". I was able to catch this error by using the "sum" and "countifs" greater than 0 function. 
 ---
+
 ## Results
 The fact that there were no significant relationship between launch date and the amount of cancelations lets us know that campaign cancelations happened for other reasons outside of launching at the "wrong times". As pointed out by the graph, there is an increase in success among campaigns that launched in May. Louise statistically would be better off launching a campaign in May as the most successful campaigns were launched in May. 
 ---
